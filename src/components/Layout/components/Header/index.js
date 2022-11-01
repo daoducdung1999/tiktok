@@ -26,6 +26,7 @@ import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -163,10 +164,11 @@ function Header() {
 
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 src="https://i.ex-cdn.com/giadinhonline.vn/files/content/2022/05/31/hotgirl-nguoi-ay-la-ai-13-0045.jpg"
                                 className={cx('user-avatar')}
                                 alt="Dao Duc Dung"
+                                fallback="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd5FU5tubTSd0jMtVswA1reLWCndjd224PGxGyzJSN&s"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
