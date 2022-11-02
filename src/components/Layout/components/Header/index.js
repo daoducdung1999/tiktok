@@ -20,6 +20,8 @@ import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import Image from '~/components/Image';
 import Search from '../Search';
+import { Link } from 'react-router-dom';
+import routesConfig from '~/config/routes';
 
 const cx = classNames.bind(styles);
 
@@ -44,6 +46,46 @@ const MENU_ITEMS = [
                     type: 'language',
                     code: 'fr',
                     title: 'French',
+                },
+                {
+                    type: 'language',
+                    code: 'es',
+                    title: 'Spanish',
+                },
+                {
+                    type: 'language',
+                    code: 'de',
+                    title: 'German',
+                },
+                {
+                    type: 'language',
+                    code: 'ar',
+                    title: 'Arabic',
+                },
+                {
+                    type: 'language',
+                    code: 'hi',
+                    title: 'Hindi',
+                },
+                {
+                    type: 'language',
+                    code: 'ja',
+                    title: 'Japanese',
+                },
+                {
+                    type: 'language',
+                    code: 'ko',
+                    title: 'Korean',
+                },
+                {
+                    type: 'language',
+                    code: 'ru',
+                    title: 'Russian',
+                },
+                {
+                    type: 'language',
+                    code: 'zh',
+                    title: 'Chinese',
                 },
             ],
         },
@@ -100,7 +142,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={images.logo} alt="Tiktok" />
+                <Link to={routesConfig.home} className={cx('logo-link')}>
+                    <img src={images.logo} alt="Tiktok" />
+                </Link>
 
                 <Search />
 
